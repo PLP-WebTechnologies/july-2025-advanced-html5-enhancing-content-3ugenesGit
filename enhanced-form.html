@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, main {
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+        }
+        nav {
+            background-color: #f4f4f4;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #aaa;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my showcase page</h1>
+        <p>Demonstating lists, tables, media and an HTML5 form.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#form">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Lists section -->
+         <section id="lists">
+            <h2>My Favourite Programming Languages</h2>
+            <ul type="square">
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>C#</li>
+            </ul>
+
+            <h3>How To Create a Web Page</h3>
+            <ol type="a">
+                <li>Plan your layout and content</li>
+                <li>Write your HTML structure</li>
+                <li>Style with CSS</li>
+                <li>Test and Publish</li>
+            </ol>
+         </section>
+
+         <!-- Tables section-->
+          <section id="tables">
+            <h2>Programming Language Popularity(2025)</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Language</th>
+                        <th>Usage(%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Python</td>
+                        <td>28.3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Javascript</td>
+                        <td>24.7</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Java</td>
+                        <td>15.1</td>
+                    </tr>
+                </tbody>
+            </table>
+          </section>
+
+          <!-- Media Section -->
+           <section id="media">
+            <h2>Media</h2>
+            <p>Watch this short video as you sip some coffee:</p>
+            <video controls width="320" height="240">
+                <source src="assets/3571264-uhd_3840_2160_30fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p>Sample image:</p>
+            <img src="assets/pexels-luis-gomes-166706-546819.jpg" alt="Laptop screen with code on it." width="320">
+           </section>
+
+           <!-- Section: Form -->
+            <section id="form">
+                <h2>Contact Form</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required minlength="3">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com">
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 0712345678" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Message Details</legend>
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="">--Select--</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required minlength="10"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferences</legend>
+                        <label>
+                            <input type="checkbox" name="subscribe" value="yes">
+                            Subscribe to newsletter
+                        </label>
+
+                        <p>Preferred Contact Method:</p>
+                        <label><input type="radio" name="contact_method" value="email" required>Email</label>
+                        <label><input type="radio" name="contact_method" value="phone" required>Phone</label>
+                    </fieldset>
+
+                    <input type="submit" value="Submit">
+                </form>
+
+            </section>
+    </main>
+</body>
+</html>
